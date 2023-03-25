@@ -216,7 +216,7 @@ ul li:hover{
         width: 100px;
         font-size: 15px;
         padding: 5px;
-        margin-left: 350px;
+        margin-left: 200px;
     }
     .btns{
         float: left;
@@ -232,7 +232,7 @@ ul li:hover{
     .svg{
         padding-left: 10px;
         padding-top: 20px;
-        margin-left: 45px;
+        margin-left: 10px;
         width: 80;
         height: 60;
     }
@@ -245,8 +245,8 @@ ul li:hover{
         transition: 2s ease;
     }
     .form{
-        margin-left: 100px;
-        margin-top: 300px;
+        margin-left: 70px;
+        margin-top: 100px;
         height: 420px;
         width: 350px;
         position: relative;
