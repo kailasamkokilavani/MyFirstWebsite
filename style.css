@@ -44,7 +44,7 @@ ul li{
     float: left;
 }
 ul li:hover{
-    color: rgb(138, 130, 130);
+    color: rgb(3, 3, 3);
     text-decoration: solid;
 }
 .search{
