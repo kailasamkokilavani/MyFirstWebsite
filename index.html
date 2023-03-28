@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webpage-1</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -158,13 +159,36 @@
 
 
         <div class="form">
+            
             <h2 class="loginhere">Login Here</h2><br>
+
             <h3 class="details">Username:</h3><br>
-            <input class="box" type="email" placeholder="Enter your email"></input><br><br>
+
+            <div class="fa">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" placeholder="Enter your email" required autocomplete="on" 
+                formmethod="post" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 3}$"></input>
+            </div>
+
+            <br><br>
             <h3 class="details">Password:</h3><br>
-            <input class="box" type="password" placeholder="Enter your password"></input>
+
+            <div class="fa">
+            <i class="fa-solid fa-key"></i>
+            <input id="demo1" type="password" placeholder="Enter your password" maxlength="12" minlength="8" required autocomplete="on" formmethod="post"></input>
+            
+            <div class="eyeopen">
+                <i id="demo2" onclick="myfunction()" class="fa-solid fa-eye"></i>
+            </div>
+
+            <div class="eyeclose">
+                <i id="demo3" onclick="myfunction()" class="fa-solid fa-eye-slash"></i>
+            </div>
+
+            </div>
+
             <br><br><br>
-            <h3 class="login">Login</h3><br><br>
+            <input class="login" type="submit" value="Login"><br><br>
             <h3 class="with">Else Log in with</h3><br>
             <div class="icons">
              <a href="#"><ion-icon name="logo-facebook"></ion-icon></a> 
@@ -175,7 +199,28 @@
             </div>
         </div>
     </div>
+
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+    <script>
+        function myfunction(){
+            var x = document.getElementById("demo1");
+            var y = document.getElementById("demo2");
+            var z = document.getElementById("demo3");
+
+            if(x.type === 'password'){
+                x.type = "text";
+                y.style.display = "block";
+                z.style.display = "none";
+            }
+            else{
+                x.type = "password";
+                y.style.display = "none";
+                z.style.display = "block";
+            }
+
+        }
+    </script>
 </body>
 
 </html>
