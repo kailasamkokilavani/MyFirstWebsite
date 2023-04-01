@@ -194,9 +194,11 @@ ul li:hover{
 .icons a{
     color: white;
     font-size: 26px;
-    padding: 10px;
-    margin-left: 20px;
+    padding: 8px;
+    margin-left: 15px;
     margin-top: 30px;
+    justify-content: center;
+   
 }
 .icons a:hover{
     color: rgb(247, 119, 15);
@@ -317,7 +319,7 @@ ul li:hover{
     .Register-form{
         margin-left: 20px;
         margin-top: -580px;
-        height: 470px;
+        height: 480px;
         width: 350px;
         position: relative;
         background: linear-gradient(to top,rgba(10, 10, 10, 0.6)50%,rgba(10, 10, 10, 0.6)50%);
