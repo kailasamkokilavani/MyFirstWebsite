@@ -322,6 +322,7 @@ ul li:hover{
         position: relative;
         background: linear-gradient(to top,rgba(10, 10, 10, 0.6)50%,rgba(10, 10, 10, 0.6)50%);
         border-radius: 20px;
+        overflow:hidden;
     }  
     .Register-form{
         margin-left: 20px;
