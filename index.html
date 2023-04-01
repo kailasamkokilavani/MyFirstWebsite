@@ -15,8 +15,13 @@
         <div class="name">VaRRniGa</div>
         <div class="menu">
             <ul>
-                <li>Home</li>
-                <li>Services</li>
+                <a href="https://www.infosys.com/" target="_blank"><li>Home</li></a>
+                <li for="service">Services</li>
+                    <datalist id="service">
+                        <option value="IT sector">
+                        <option value="Consulting"> 
+                        <option value="BPM">
+                    </datalist>
                 <li>Organization</li>
                 <li>About Us</li>
             </ul>
@@ -155,54 +160,110 @@
                 <rect x="155.56764" y="92.60598" width="96.41699" height="2" fill="#3f3d56" />
             </svg>
         </div>
-        <button class="button">Create an account</button>
+        <button class="button" id="create" onclick="createaccount()">Create an account</button>
 
 
-        <div class="form">
+        <form id="login-form" class="Login-form" action="#">
             
-            <h2 class="loginhere">Login Here</h2><br>
+            <h2 class="loginhere" id="loginhere">Login Here</h2><br>
 
-            <h3 class="details">Username:</h3><br>
+            <h3 class="details">Email: *</h3><br>
 
             <div class="fa">
             <i class="fa-solid fa-envelope"></i>
-            <input type="email" placeholder="Enter your email" required autocomplete="on" 
-                formmethod="post" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 3}$"></input>
+            <input id="mail1" onkeydown="email_validation()"  type="email" placeholder="Enter your email" required autocomplete="on" 
+                formmethod="post" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"></input>
             </div>
+            <span id="span1" type="text"></span>
 
             <br><br>
-            <h3 class="details">Password:</h3><br>
+            <h3 class="details">Password: *</h3><br>
 
             <div class="fa">
+                <i class="fa-solid fa-key"></i>
+                <input id="demo1" onkeydown="pass1_validation1()" type="password" placeholder="Enter your password" required autocomplete="on" formmethod="post" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"></input>
+                
+                <div class="eyeopen">
+                    <i id="demo2" onclick="myfunction()" class="fa-solid fa-eye"></i>
+                </div>
+    
+                <div class="eyeclose">
+                    <i id="demo3" onclick="myfunction()" class="fa-solid fa-eye-slash"></i>
+                </div>
+
+            </div>
+                <span id="span3" type="text"></span>
+    
+
+
+            <br><br><br>
+            <button  class="login" id="login1" onclick="login()" type="submit" >Login</button><br><br>
+            <h3 class="with" id="else">Else Log in with</h3><br>
+            <div class="icons" id="ids">
+             <a href="https://www.facebook.com/"><ion-icon name="logo-facebook"></ion-icon></a> 
+             <a href="https://www.instagram.com/"><ion-icon name="logo-instagram"></ion-icon></a> 
+             <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D"><ion-icon name="logo-twitter"></ion-icon></a> 
+             <a href="https://accounts.google.com/v3/signin/identifier?dsh=S1476542952%3A1680168609409386&continue=https%3A%2F%2Faccounts.google.com%2F&followup=https%3A%2F%2Faccounts.google.com%2F&ifkv=AQMjQ7TI3XliXh2dZ0PLqA9Vz8T_IKTjFHwisceBFShvaqm8Bhp2d8_JfR5pSKSqTfOtQjVn_evMmg&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><ion-icon name="logo-google"></ion-icon></a> 
+             <a href="https://www.skype.com/en/"><ion-icon name="logo-skype"></ion-icon></a> 
+            </div>
+        </div>
+    </form>
+
+    <form id="Register-form" class="Register-form" action="#">
+            
+        <h2 class="loginhere" id="loginhere">Register Here</h2><br>
+
+        <h3 class="details">Email: *</h3><br>
+
+        <div class="fa">
+        <i class="fa-solid fa-envelope"></i>
+        <input  id="mail2" onkeydown="email_validation1()" type="email" placeholder="Enter your email" required autocomplete="on" 
+            formmethod="post" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"></input>
+        </div>
+        <span id="span2" type="text"></span>
+
+        <br><br>
+        <h3 class="details">Password: *</h3><br>
+
+        <div class="fa">
             <i class="fa-solid fa-key"></i>
-            <input id="demo1" type="password" placeholder="Enter your password" maxlength="12" minlength="8" required autocomplete="on" formmethod="post"></input>
+            <input id="demo4" onkeydown="pass2_validation1()" type="password" placeholder="Enter your password" required autocomplete="on" formmethod="post" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"></input>
             
             <div class="eyeopen">
-                <i id="demo2" onclick="myfunction()" class="fa-solid fa-eye"></i>
+                <i id="demo5" onclick="myfunction1()" class="fa-solid fa-eye"></i>
             </div>
 
             <div class="eyeclose">
-                <i id="demo3" onclick="myfunction()" class="fa-solid fa-eye-slash"></i>
-            </div>
-
-            </div>
-
-            <br><br><br>
-            <input class="login" type="submit" value="Login"><br><br>
-            <h3 class="with">Else Log in with</h3><br>
-            <div class="icons">
-             <a href="#"><ion-icon name="logo-facebook"></ion-icon></a> 
-             <a href="#"><ion-icon name="logo-instagram"></ion-icon></a> 
-             <a href="#"><ion-icon name="logo-twitter"></ion-icon></a> 
-             <a href="#"><ion-icon name="logo-google"></ion-icon></a> 
-             <a href="#"><ion-icon name="logo-skype"></ion-icon></a> 
+                <i id="demo6" onclick="myfunction1()" class="fa-solid fa-eye-slash"></i>
             </div>
         </div>
-    </div>
+            <span id="span4" type="text"></span>
 
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+            <br><br>
+            <h3 class="details">Confirm Password: *</h3><br>
+    
+            <div class="fa">
+                <i class="fa-solid fa-key"></i>
+                <input id="demo7" onkeydown="pass3_validation1()" type="password" placeholder="Enter your password" required autocomplete="on" formmethod="post" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"></input>
+                
+                <div class="register-eyeopen">
+                    <i id="demo8" onclick="myfunction2()" class="fa-solid fa-eye"></i>
+                </div>
+    
+                <div class="register-eyeclose">
+                    <i id="demo9" onclick="myfunction2()" class="fa-solid fa-eye-slash"></i>
+                </div>
+        </div>
+        <span id="span5" type="text"></span>
 
-    <script>
+        <br><br><br>
+        <button  class="login" id="login" onclick="register()" type="submit" >Register</button><br><br>
+        <h3 class="with" id="else" onclick="createaccount1()">Have an account<a href="#">Login</a></h3><br>
+    </form>
+
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+<script>
         function myfunction(){
             var x = document.getElementById("demo1");
             var y = document.getElementById("demo2");
@@ -219,6 +280,234 @@
                 z.style.display = "block";
             }
 
+        }
+    </script>
+
+<script>
+    function myfunction1(){
+        var x = document.getElementById("demo4");
+        var y = document.getElementById("demo5");
+        var z = document.getElementById("demo6");
+
+        if(x.type === 'password'){
+            x.type = "text";
+            y.style.display = "block";
+            z.style.display = "none";
+        }
+        else{
+            x.type = "password";
+            y.style.display = "none";
+            z.style.display = "block";
+        }
+
+    }
+    </script>
+
+<script>
+    function myfunction2(){
+        var x = document.getElementById("demo7");
+        var y = document.getElementById("demo8");
+        var z = document.getElementById("demo9");
+        
+
+        if(x.type === 'password'){
+            x.type = "text";
+            y.style.display = "block";
+            z.style.display = "none";
+        }
+        else{
+            x.type = "password";
+            y.style.display = "none";
+            z.style.display = "block";
+        }
+
+    }
+    </script>
+
+<script>
+        function register(){
+
+            var x = document.getElementById("demo4");
+            var y = document.getElementById("demo7");
+            var z = document.getElementById("mail2");
+            var pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"; 
+
+            if((x.value === y.value) && (z.value.match(pattern))){
+                window.alert("Registered Successfully");
+            }
+            else{
+               window.alert("Enter valid credentials");
+               return;
+            }
+           
+        }
+    </script>
+
+<script>
+
+        function createaccount(){
+
+            let z = document.getElementById("Register-form");
+            let y = document.getElementById("login-form");
+            
+            document.getElementById("create").click();{
+                z.style.display="block";
+                y.style.display="none";
+
+            }
+    }
+    </script>
+
+<script>
+
+    function createaccount1(){
+
+        let z = document.getElementById("Register-form");
+        let y = document.getElementById("login-form");
+
+        document.getElementById("else").click();{
+                z.style.display="none";
+                y.style.display="block";
+
+            }
+        }
+    </script>
+
+<script>
+    function email_validation(){
+
+        var x = document.getElementById("mail1");
+        var y = document.getElementById("login-form");
+        var z = document.getElementById("span1");
+        var pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
+
+        if(x.value.match(pattern)){
+            y.classList.add("valid");
+            y.classList.remove("invalid");
+            z.innerHTML = "Valid";
+            z.style.color = "green";
+        }
+        else{
+            y.classList.remove("valid");
+            y.classList.add("invalid");
+            z.innerHTML="Invalid";
+            z.style.color = "red";
+        }
+    }
+    </script>
+
+<script>
+    function email_validation1(){
+
+        var pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
+        var y=document.getElementById("mail2");
+        var z = document.getElementById("Register-form");
+        var a = document.getElementById("span2");
+
+        if(y.value.match(pattern)){
+            z.classList.add("valid");
+            z.classList.remove("invalid");
+            a.innerHTML = "Valid";
+            a.style.color = "green";
+        }
+        else{
+            z.classList.remove("valid");
+            z.classList.add("invalid");
+            a.innerHTML = "Invalid";
+            a.style.color = "red";
+        }
+
+    }
+    </script>
+
+<script>
+    function pass1_validation1(){
+
+        var pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,}";
+        var x =document.getElementById("demo1");
+        var y = document.getElementById("login-form");
+        var z = document.getElementById("span3");
+
+        if(x.value.match(pattern)){
+            y.classList.add("valid");
+            y.classList.remove("invalid");
+            z.innerHTML = "Valid";
+            z.style.color = "green";
+          }
+        else{
+            y.classList.remove("valid");
+            y.classList.add("invalid");
+            z.innerHTML = "Invalid";
+            z.style.color = "red";
+         }
+
+    }
+    </script>
+
+<script>
+    function pass2_validation1(){
+
+        var pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,}";
+        var x =document.getElementById("demo4");
+        var y = document.getElementById("Register-form");
+        var z = document.getElementById("span4");
+
+        if(x.value.match(pattern)){
+            y.classList.add("valid");
+            y.classList.remove("invalid");
+            z.innerHTML = "Valid";
+            z.style.color = "green";
+        }
+        else{
+            y.classList.remove("valid");
+            y.classList.add("invalid");
+            z.innerHTML = "Invalid";
+            z.style.color = "red";
+        }
+
+    }
+    </script>
+
+<script>
+    function pass3_validation1(){
+
+        var pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,}";
+        var x =document.getElementById("demo7");
+        var y = document.getElementById("Register-form");
+        var z = document.getElementById("span5");
+
+        if(x.value.match(pattern)){
+            y.classList.add("valid");
+            y.classList.remove("invalid");
+            z.innerHTML = "Valid";
+            z.style.color = "green";
+        }
+        else{
+            y.classList.remove("valid");
+            y.classList.add("invalid");
+            z.innerHTML = "Invalid";
+            z.style.color = "red";
+        }
+
+    }
+    </script>
+
+    <script>
+        function login(){
+        var pattern1="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,}";
+        var x =document.getElementById("demo1");
+        var pattern2="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
+        var y=document.getElementById("mail1");
+        var z=document.getElementById("login1");
+
+        if(x.value.match(pattern1) && y.value.match(pattern2)){
+            window.location.assign("https://www.w3schools.com/");
+            window.alert("Loged in Successfully");
+        }
+        else{
+            window.alert("Enter valid credentials");
+            return;
+        }
         }
     </script>
 </body>
