@@ -263,7 +263,7 @@ ul li:hover{
     } 
     .menu{
         float: left;
-        width: 420px;
+        width: 400px;
         height: 40px;
     
     }
@@ -280,13 +280,14 @@ ul li:hover{
         width: 100px;
         font-size: 15px;
         padding: 5px;
-        margin-left: 150px;
+        margin-left: 160px;
+        margin-top: -100px;  
     }
     .btns{
         float: left;
         font-size: 15px;
         padding: 5px;
-        margin-top: 10px;
+        margin-top: -100px; 
         cursor: pointer;
     }
     .btn::placeholder{
@@ -295,7 +296,6 @@ ul li:hover{
     }
     .svg{
        display: none;
-       
     }
     .button{
         margin-left: 120px;
@@ -306,7 +306,7 @@ ul li:hover{
         overflow: hidden;
     }
     .Login-form{
-        margin-left: -730px;
+        margin-left: -780px;
         margin-top: 30px;
         height: 430px;
         width: 350px;
