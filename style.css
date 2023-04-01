@@ -309,7 +309,7 @@ ul li:hover{
         overflow: hidden;
     }
     .Login-form{
-        margin-left: -1280px;
+        margin-left: -480px;
         margin-top: 30px;
         height: 430px;
         width: 350px;
@@ -319,7 +319,7 @@ ul li:hover{
     }  
     .Register-form{
         margin-left: 20px;
-        margin-top: -680px;
+        margin-top: -620px;
         height: 480px;
         width: 350px;
         position: relative;
