@@ -319,7 +319,7 @@ ul li:hover{
         margin-top: -100px;
         height: 470px;
         width: 350px;
-        position: absolute;
+        position: relative;
         background: linear-gradient(to top,rgba(10, 10, 10, 0.6)50%,rgba(10, 10, 10, 0.6)50%);
         border-radius: 20px;
         justify-content: center;
