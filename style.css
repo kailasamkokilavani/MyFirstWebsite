@@ -283,13 +283,14 @@ ul li:hover{
         font-size: 15px;
         padding: 5px;
         margin-left: 160px;
+        margin-top: 5px; 
          
     }
     .btns{
         float: left;
         font-size: 15px;
         padding: 5px;
-        margin-top: 10px; 
+        margin-top: 5px; 
         cursor: pointer;
     }
     .btn::placeholder{
