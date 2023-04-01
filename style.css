@@ -267,7 +267,10 @@ ul li:hover{
         float: left;
         width: 400px;
         height: 40px;
-    
+        margin-top:10px;
+    }
+    .search{
+        margin-top:10px;        
     }
     ul li{
         margin-left: 30px;
